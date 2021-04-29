@@ -8,7 +8,6 @@ import spacy
 from PIL import Image
 from wordcloud import WordCloud, STOPWORDS
 import yfinance as yf
-import numpy as np
 import base64
 
 # Importar dataset
