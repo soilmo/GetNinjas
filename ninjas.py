@@ -1,14 +1,10 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 import datetime
 import altair as alt
 import spacy
 from PIL import Image
 from wordcloud import WordCloud, STOPWORDS
-import yfinance as yf
-import numpy as np
 import base64
 
 # Importar dataset
@@ -17,7 +13,6 @@ url_dataset = 'https://github.com/soilmo/GetNinjas/blob/main/get_ninjas.xlsx?raw
 def importar_base(url):
     df = pd.read_excel(url, engine='openpyxl')
     return df
-
 
 # Funções para word cloud -------------------------------------
 @st.cache(persist=True, max_entries = 20, ttl = 1800, show_spinner=False)
