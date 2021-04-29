@@ -15,7 +15,7 @@ import base64
 url_dataset = 'https://github.com/soilmo/GetNinjas/blob/main/get_ninjas.xlsx?raw=true'
 @st.cache(show_spinner=False)
 def importar_base(url):
-    df = pd.read_excel(url)
+    df = pd.read_excel(url, engine='openpyxl')
     return df
 
 
