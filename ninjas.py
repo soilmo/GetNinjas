@@ -8,13 +8,14 @@ import spacy
 from PIL import Image
 from wordcloud import WordCloud, STOPWORDS
 import yfinance as yf
+import numpy as np
 import base64
 
 # Importar dataset
-url_dataset = 'https://github.com/soilmo/GetNinjas/blob/main/get_ninjas.xlsx?raw=true'
+url_dataset = 'https://github.com/soilmo/GetNinjas/blob/main/get_ninjas.csv?raw=true'
 @st.cache(show_spinner=False)
 def importar_base(url):
-    df = pd.read_excel(url)
+    df = pd.read_csv(url)
     return df
 
 
